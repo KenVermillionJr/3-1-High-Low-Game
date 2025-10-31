@@ -23,14 +23,12 @@ function playHighLowGame() {
     let usrGuess = window.prompt("What number am I thinking of?");
     usrGuess = parseInt(usrGuess);
 
-    console.log(`${typeof (usrGuess)}`);
-
     if (typeof (usrGuess) == "string") {
       window.alert(`That is not a number. Please guess a number 1-100.`);
     }
 
     if (!usrGuess) {
-      window.alert(`Thanks for playing!`);
+      window.alert(`Not playing Aaaw!`);
       break;
     }
 
