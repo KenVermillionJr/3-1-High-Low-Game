@@ -55,7 +55,7 @@ function playHighLowGame() {
     }
   } // end while
 
-  let playAgain = window.confirm("Would you like to play again?");
+  let playAgain = window.confirm("Let's play again?");
   if (playAgain == true) {
     playHighLowGame();
   } else {
