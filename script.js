@@ -44,7 +44,7 @@ function playHighLowGame() {
 
     if (usrGuess === targetNumber) {
       console.log(`Guess: ${usrGuess} is correct.`)
-      window.alert(`You got it? That's my number! It only took you ${tries} tries.`);
+      window.alert(`You got it? That's my number! It only took you ${tries} ${tries === 1 ? 'try' : 'tries'}.`);
       break;
     } else if (usrGuess !== targetNumber) {
 
