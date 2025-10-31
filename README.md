@@ -1,6 +1,7 @@
 # 🎯 High-Low Number Guessing Game — Alert and Prompt Edition (29-Stu_HighLow)
 
 Solved:
+
 <a href="https://raw.githack.com/KenVermillionJr/3-1-High-Low-Game/refs/heads/main/index.html" target="_blank">View Portfolio via (Githack)</a> <br>
 <a href="https://kenvermillionjr.github.io/3-1-High-Low-Game/" target="_blank">View Portfolio via (GitHub live pages)</a> <br>
 
