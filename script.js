@@ -7,7 +7,6 @@ function playHighLowGame() {
   let tries = 0;
   let keepGuessing = true;
 
-  // Outside loop
   // Welcome
   window.alert("🎮 Welcome to the High-Low Number Guessing Game!");
   window.alert("I'm thinking of a number between 1 and 100...");
