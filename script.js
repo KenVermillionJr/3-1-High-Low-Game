@@ -63,7 +63,6 @@ function playHighLowGame() {
       }
     }
   } // end while
-
 } // end function
 
 // 🚀 Call the function to start the game
