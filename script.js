@@ -21,11 +21,14 @@ function playHighLowGame() {
 
     // Create a variable to track how many guesses the player has made
     let usrGuess = window.prompt("What number am I thinking of?");
+
     usrGuess = parseInt(usrGuess);
 
     if (typeof (usrGuess) == "string") {
       window.alert(`That is not a number. Please guess a number 1-100.`);
     }
+
+    // console.log(`usrGuess: ${usrGuess} | typeof: ${typeof (usrGuess)}`)
 
     if (!usrGuess) {
       window.alert(`Not playing Aaaw!`);
