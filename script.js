@@ -46,10 +46,10 @@ function playHighLowGame() {
     } else if (usrGuess !== targetNumber) {
 
       if (usrGuess > targetNumber) {
-        window.alert(`Try: ${tries} | You guessed: ${usrGuess}.. too high. Guess Again?`);
+        window.alert(`Try: ${tries} | You guessed: ${usrGuess}.. too high. Guess Again.`);
         console.log(`Guess: ${usrGuess} is incorrect .. too high`);
       } else if (usrGuess < targetNumber) {
-        window.alert(`Try: ${tries} | You guessed: ${usrGuess}.. too low. Guess Again?`);
+        window.alert(`Try: ${tries} | You guessed: ${usrGuess}.. too low. Guess Again.`);
         console.log(`Guess: ${usrGuess} is incorrect .. too low`);
       }
     }
