@@ -2,44 +2,89 @@
 // You will use prompt(), alert(), and confirm() to make an interactive guessing game!
 
 function playHighLowGame() {
+
+  // tracking only one item
+  let tries = 0;
+  let keepGuessing = true;
+
   // Welcome message
 
+  // single round code --
+
+  // window.alert("🎮 Welcome to the High-Low Number Guessing Game!");
+  // window.alert("I'm thinking of a number between 1 and 100...");
+
+  // // TODO: Create a variable for computer chosing number 1-100
+  // let targetNumber = Math.floor(Math.random() * 100) + 1;
+
+  // console.log(`Generate a random number (1-100): ${targetNumber}`)
+
+  // // TODO: Create a variable to track how many guesses the player has made
+  // let usrGuess = window.prompt("What number am I thinking of?");
+  // usrGuess = parseInt(usrGuess);
+
+  // console.log(`usrGuess: ${usrGuess} type: ${typeof (usrGuess)}`);
+
+  // if (typeof (usrGuess) !== "number") {
+  //   window.alert(`That is not a number. Please guess a number 1-100.`);
+  // }
+
+  // Outside loop
+  // Welcome
   window.alert("🎮 Welcome to the High-Low Number Guessing Game!");
   window.alert("I'm thinking of a number between 1 and 100...");
 
-  // Get to work - Example random number between 1-100
-  // Ex. const targetNumber = Math.floor((Math.random() * 100) + 1);
-  // (Math.random() * 100)will always return a floating point number > 0 and < 9.
-  // Math.Floor(Math.random() * 100) will permit 0 but never 100, hence + 1
+  // Create a variable for computer chosing number 1-100
+  let targetNumber = Math.floor(Math.random() * 100) + 1;
 
-  // + 1 to allow for choosing 100 to be possible
-  const targetNumber = Math.floor(Math.random() * 100) + 1;
   console.log(`Generate a random number (1-100): ${targetNumber}`)
 
-  // TODO: Create a variable to track how many guesses the player has made
+  // begin while loop
+  while (keepGuessing) {
 
+    // Create a variable to track how many guesses the player has made
+    let usrGuess = window.prompt("What number am I thinking of?");
+    usrGuess = parseInt(usrGuess);
 
-  // Create a variable to store the player's current guess
-  let guess = null;
+    console.log(`${typeof (usrGuess)}`);
 
-  // TODO: Create a loop that keeps asking the player for a guess until they guess correctly
-  // Use window.prompt() to ask for a number
+    if (typeof (usrGuess) == "string") {
+      window.alert(`That is not a number. Please guess a number 1-100.`);
+    }
 
+    if (!usrGuess) {
+      window.alert(`Thanks for playing!`);
+      break;
+    }
 
-  // Inside your loop:
-  // 1️⃣ Convert the input to a number using parseInt()
-  // 2️⃣ Check if the guess is too high, too low, or correct
-  // 3️⃣ Use window.alert() to tell the player the result
-  // 4️⃣ Count the number of attempts
+    tries++;
+    console.log(`tries: ${tries}`)
+    console.log(`You Guessed: ${usrGuess}`)
+    console.log(`usrGuess: ${usrGuess} | typeof: ${typeof (usrGuess)}`)
+    console.log(`targetNumber: ${targetNumber} | typeof: ${typeof (targetNumber)}`)
 
+    if (usrGuess === targetNumber) {
 
-  // TODO: When the player guesses correctly:
-  // - Alert them that they won and show how many attempts it took
-  // - Ask if they want to play again using window.confirm()
-  // - If yes, call playHighLowGame() again
-  // - If no, show a “Thanks for playing” message
+      console.log(`Guess: ${usrGuess} is correct.`)
+      window.alert(`You got it? That's my number! It only took you ${tries} tries.`);
+      break;
 
-}
+    } else if (usrGuess !== targetNumber) {
+
+      if (usrGuess > targetNumber) {
+
+        window.alert(`Try: ${tries} | You guessed: ${usrGuess}.. too high. Guess Again?`);
+        console.log(`Guess: ${usrGuess} is incorrect .. too high`);
+
+      } else if (usrGuess < targetNumber) {
+
+        window.alert(`Try: ${tries} | You guessed: ${usrGuess}.. too low. Guess Again?`);
+        console.log(`Guess: ${usrGuess} is incorrect .. too low`);
+
+      }
+    }
+  }
+}// end while
 
 // 🚀 Call the function to start the game
 playHighLowGame();
