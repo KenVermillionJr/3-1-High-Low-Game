@@ -3,31 +3,9 @@
 
 function playHighLowGame() {
 
-  // tracking only one item
+  // tracking only one item, tries
   let tries = 0;
   let keepGuessing = true;
-
-  // Welcome message
-
-  // single round code --
-
-  // window.alert("🎮 Welcome to the High-Low Number Guessing Game!");
-  // window.alert("I'm thinking of a number between 1 and 100...");
-
-  // // TODO: Create a variable for computer chosing number 1-100
-  // let targetNumber = Math.floor(Math.random() * 100) + 1;
-
-  // console.log(`Generate a random number (1-100): ${targetNumber}`)
-
-  // // TODO: Create a variable to track how many guesses the player has made
-  // let usrGuess = window.prompt("What number am I thinking of?");
-  // usrGuess = parseInt(usrGuess);
-
-  // console.log(`usrGuess: ${usrGuess} type: ${typeof (usrGuess)}`);
-
-  // if (typeof (usrGuess) !== "number") {
-  //   window.alert(`That is not a number. Please guess a number 1-100.`);
-  // }
 
   // Outside loop
   // Welcome
@@ -58,6 +36,7 @@ function playHighLowGame() {
     }
 
     tries++;
+
     console.log(`tries: ${tries}`)
     console.log(`You Guessed: ${usrGuess}`)
     console.log(`usrGuess: ${usrGuess} | typeof: ${typeof (usrGuess)}`)
@@ -83,8 +62,9 @@ function playHighLowGame() {
 
       }
     }
-  }
-}// end while
+  } // end while
+
+} // end function
 
 // 🚀 Call the function to start the game
 playHighLowGame();
