@@ -43,23 +43,17 @@ function playHighLowGame() {
     console.log(`targetNumber: ${targetNumber} | typeof: ${typeof (targetNumber)}`)
 
     if (usrGuess === targetNumber) {
-
       console.log(`Guess: ${usrGuess} is correct.`)
       window.alert(`You got it? That's my number! It only took you ${tries} tries.`);
       break;
-
     } else if (usrGuess !== targetNumber) {
 
       if (usrGuess > targetNumber) {
-
         window.alert(`Try: ${tries} | You guessed: ${usrGuess}.. too high. Guess Again?`);
         console.log(`Guess: ${usrGuess} is incorrect .. too high`);
-
       } else if (usrGuess < targetNumber) {
-
         window.alert(`Try: ${tries} | You guessed: ${usrGuess}.. too low. Guess Again?`);
         console.log(`Guess: ${usrGuess} is incorrect .. too low`);
-
       }
     }
   } // end while
