@@ -56,6 +56,14 @@ function playHighLowGame() {
       }
     }
   } // end while
+
+  let playAgain = window.confirm("Would you like to play again?");
+  if (playAgain == true) {
+    playHighLowGame();
+  } else {
+    window.alert("Thanks for playing!");
+  }
+
 } // end function
 
 // 🚀 Call the function to start the game
