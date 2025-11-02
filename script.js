@@ -3,6 +3,12 @@
 
 function playHighLowGame() {
 
+  /* audio sources */
+  const wrong = document.querySelector('#guessWrong')
+  // wrong.play()
+  const youWon = document.querySelector('#youWon')
+  // youWon.play()
+
   // tracking only one item, tries
   let tries = 0;
   let keepGuessing = true;
@@ -45,14 +51,20 @@ function playHighLowGame() {
     if (usrGuess === targetNumber) {
       console.log(`Guess: ${usrGuess} is correct.`)
       window.alert(`You got it? That's my number! It only took you ${tries} ${tries === 1 ? 'try' : 'tries'}.`);
+      /* audio you won */
+      // youWon.play();
       break;
     } else if (usrGuess !== targetNumber) {
 
       if (usrGuess > targetNumber) {
         window.alert(`Try: ${tries} | You guessed: ${usrGuess}.. too high. Guess Again.`);
         console.log(`Guess: ${usrGuess} is incorrect .. too high`);
+        /* audio wrong answer */
+        wrong.play();
       } else if (usrGuess < targetNumber) {
         window.alert(`Try: ${tries} | You guessed: ${usrGuess}.. too low. Guess Again.`);
+        /* audio wrong answer */
+        // wrong.play();
         console.log(`Guess: ${usrGuess} is incorrect .. too low`);
       }
     }
